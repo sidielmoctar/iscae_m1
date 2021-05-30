@@ -25,3 +25,7 @@ Exercice 3:
 
 Intégrer bootstrap et font-awesome icons : 
 https://use.fontawesome.com/releases/v5.15.3/fontawesome-free-5.15.3-web.zip
+
+Exercice 4: 
+
+Remplir la table html à partir du js
