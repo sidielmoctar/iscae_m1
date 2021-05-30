@@ -20,3 +20,7 @@ importer les css et js dans index.
 Exercice 2:
 Créer une table HTML de 5 personnes avec :
 prénom, nom, genre, dateNaissance
+
+Exercice 3:
+
+Intégre bootstrap et font-awesome icons
