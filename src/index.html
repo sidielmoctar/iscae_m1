@@ -4,51 +4,79 @@
    <HEAD>
       <TITLE>Liste des persons</TITLE>
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="bootstrap.min.css">
+      <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.min.css">
    </HEAD>
    <BODY>
-     <h3 class="title" id="title">Liste des persons</h3>
+     <div class="row m-2">
+         <div class="col-sm-12">
+            <h3 class="title" id="title">Liste des persons</h3>
+         </div>
+     </div>
 
-     <table>
-         <tr>
-             <th>Prénom</th>
-             <th>Nom</th>
-             <th>Genre</th>
-             <th>Date de naissance</th>
-             <th>Action</th>
-         </tr>
-         <tr>
-             <td>Fati</td>
-             <td>SIDI</td>
-             <td>F</td>
-             <td>31/12/1997</td>
-         </tr>
-         <tr>
-             <td>Oumar</td>
-             <td>Sy</td>
-             <td>H</td>
-             <td>31/12/1999</td>
-         </tr>
-         <tr>
-             <td>Houda</td>
-             <td>Oussama</td>
-             <td>F</td>
-             <td>31/12/2000</td>
-         </tr>
-         <tr>
-             <td>Ahmed</td>
-             <td>Aboubacar</td>
-             <td>H</td>
-             <td>31/12/1998</td>
-         </tr>
-         <tr>
-             <td>Outhman</td>
-             <td>Sidna</td>
-             <td>H</td>
-             <td>31/12/2001</td>
-         </tr>
-     </table>
-
-
+     <div class="row m-2">
+         <div class="col-sm-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Genre</th>
+                    <th>Date de naissance</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Fati</td>
+                    <td>SIDI</td>
+                    <td>F</td>
+                    <td>31/12/1997</td>
+                    <td>
+                        <button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oumar</td>
+                    <td>Sy</td>
+                    <td>H</td>
+                    <td>31/12/1999</td>
+                    <td>
+                        <button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Houda</td>
+                    <td>Oussama</td>
+                    <td>F</td>
+                    <td>31/12/2000</td>
+                    <td>
+                        <button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ahmed</td>
+                    <td>Aboubacar</td>
+                    <td>H</td>
+                    <td>31/12/1998</td>
+                    <td>
+                        <button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Outhman</td>
+                    <td>Sidna</td>
+                    <td>H</td>
+                    <td>31/12/2001</td>
+                    <td>
+                        <button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            </table>
+         </div>
+     </div>
      <script src="script.js"></script>
    </BODY>
 </HTML>

@@ -23,4 +23,5 @@ prénom, nom, genre, dateNaissance
 
 Exercice 3:
 
-Intégre bootstrap et font-awesome icons
+Intégrer bootstrap et font-awesome icons : 
+https://use.fontawesome.com/releases/v5.15.3/fontawesome-free-5.15.3-web.zip
