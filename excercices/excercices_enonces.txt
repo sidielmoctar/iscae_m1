@@ -1,0 +1,18 @@
+Prérequis :
+
+installer visual studio code
+installer des extensions :
+	JavaScript (ES6) code snippets
+	HTML CSS Support
+	HTML Snippets
+	IntelliSense for CSS class names in HTML
+	Live Server
+
+Excercice 1: 
+
+créer 
+un fichier index html
+un fichier style.css
+un fichier script.js
+
+importer les css et js dans index
