@@ -1,37 +1,100 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<HTML>
-   <HEAD>
-      <TITLE>Liste des persons</TITLE>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="bootstrap.min.css">
-      <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.min.css">
-   </HEAD>
-   <BODY>
-     <div class="row m-2">
-         <div class="col-sm-12">
-            <h3 class="title" id="title">Liste des persons</h3>
-         </div>
-     </div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Liste des persons</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.15.3-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="row m-2">
+      <div class="col-sm-12">
+        <h3 class="title" id="titlePersonList">Liste des personnes</h3>
+      </div>
+    </div>
+    <div class="row m-2">
+      <div class="col-sm-12 text-right">
+        <button type="button" class="btn btn-outline-primary" id="addButton">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row m-2">
+      <div class="col-sm-12">
+        <table id="tablePersons" class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Prénom</th>
+              <th>Nom</th>
+              <th>Genre</th>
+              <th>Date de naissance</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tablePersonsBody"></tbody>
+        </table>
+      </div>
+    </div>
 
-     <div class="row m-2">
-         <div class="col-sm-12">
-            <table id="tablePersons" class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Genre</th>
-                        <th>Date de naissance</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="tablePersonsBody">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 id="titleAddPerson">Ajouter une personne</h1>
 
-                </tbody>
-            </table>
-         </div>
-     </div>
-     <script src="script.js"></script>
-   </BODY>
-</HTML>
+        <form id="formAddPerson" action="">
+          <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" />
+          </div>
+          <div>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" />
+          </div>
+          <div>
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" name="genre" />
+          </div>
+          <div>
+            <label for="dtNaiss">Date de naissance</label>
+            <input type="text" id="dtNaiss" name="dtNaiss" />
+          </div>
+          <div class="buttonAddPerson">
+            <button class="btn" type="button" id="saveNewPerson">
+              Enregistrer
+            </button>
+          </div>
+        </form>
+
+        <h1 id="titleUpdatePerson">Mettre à jour une personne</h1>
+
+        <form action="" id="formUpdatePerson">
+          <div>
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenomUpdate" name="prenom" />
+          </div>
+          <div>
+            <label for="nom">Nom</label>
+            <input type="text" id="nomUpdate" name="nom" />
+          </div>
+          <div>
+            <label for="genre">Genre</label>
+            <input type="text" id="genreUpdate" name="genre" />
+          </div>
+          <div>
+            <label for="dtNaiss">Date de naissance</label>
+            <input type="text" id="dtNaissUpdate" name="dtNaiss" />
+          </div>
+          <div class="buttonUpdatePerson">
+            <button class="btn" type="button" id="updatePerson">
+              Enregistrer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
