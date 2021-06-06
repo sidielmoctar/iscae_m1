@@ -1,7 +1,15 @@
 1. Créer les tables :
 
-	etudiant (idEtidiant, prenom, nom, genre)
+	etudiant (idEtudiant, prenom, nom, genre)
 	professeur (idProf, prenom, nom)
 	matiere (idMat, intitule)
 	professeur_rel_matiere (idProfRelMat, idProf, idMat)
-	note (idNote, note, idProfRelMat, commentaire)
+	note (idNote, note, idEtudiant, idProfRelMat, commentaire)
+	
+2 - mettre dans pom.xml les dependencies : 
+	
+	aller au site maven repository : https://mvnrepository.com/ 
+	
+	et chercher les dependencies : 
+		hibernate-core
+		mysql-connector-java
