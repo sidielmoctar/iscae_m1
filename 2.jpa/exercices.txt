@@ -7,9 +7,42 @@
 	note (idNote, note, idEtudiant, idProfRelMat, commentaire)
 	
 2 - mettre dans pom.xml les dependencies : 
+
+	ajouter la balise <dependencies></dependencies> sous la balise
+	version et 
 	
 	aller au site maven repository : https://mvnrepository.com/ 
 	
 	et chercher les dependencies : 
 		hibernate-core
 		mysql-connector-java
+		
+	mettre dependencies
+	
+3 - sous src/main/resources : 
+
+	créer un dossier META-INF
+	sous META-INF créer un fichier persistence.xml
+	
+	aller au lien : 
+	https://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/index.html 
+	
+	et télécharger le fichier 	persistence_2_2.xsd ouvrir le fichier et copier : 
+	
+	<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+        version="2.2">
+          ...
+    </persistence>
+	
+	dans votre persistence.xml
+	
+4 - Terminer la configuration de persistence.xml 
+
+	donner le driver, user, password 
+	
+5 - créer une entité jpa Etudiant qui mappe la table etudiant
+
+6- ajouter, modifier et supprimer un étudiant 
