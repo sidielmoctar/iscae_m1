@@ -1,0 +1,7 @@
+1. Créer les tables :
+
+	etudiant (idEtidiant, prenom, nom, genre)
+	professeur (idProf, prenom, nom)
+	matiere (idMat, intitule)
+	professeur_rel_matiere (idProfRelMat, idProf, idMat)
+	note (idNote, note, idProfRelMat, commentaire)
