@@ -15,6 +15,16 @@ public class Etudiant {
 	private String nom;
 	private String genre;
 	
+	public Etudiant() {}
+	
+	
+	public Etudiant(String prenom, String nom, String genre) {
+		this.prenom = prenom;
+		this.nom = nom;
+		this.genre = genre;
+	}
+	
+	
 	@Id
 	@Column(name = "idEtudiant")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +54,10 @@ public class Etudiant {
 	}
 	
 
-	
+	public String toString() {
+		return "Nom: " + getNom() + " , Prénom: " + getPrenom() + " , Genre : " 
+	    + getGenre();
+	}
 	
 
 }
