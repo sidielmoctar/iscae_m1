@@ -46,3 +46,7 @@
 5 - créer une entité jpa Etudiant qui mappe la table etudiant
 
 6- ajouter, modifier et supprimer un étudiant 
+
+7- Créer des services Resteful : ajouter,consulter,  modifier, supprimer un étudiant
+
+utiliser POSTMAN
