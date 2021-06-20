@@ -10,7 +10,7 @@ import javax.persistence.TypedQuery;
 
 public class EtudiantDao {
 
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("NoteUnit");
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("EtudiantUnit");
 	EntityManager em = emf.createEntityManager();
 
 	public void add(Etudiant etudiant) {

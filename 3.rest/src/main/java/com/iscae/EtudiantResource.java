@@ -9,8 +9,10 @@ import javax.persistence.Persistence;
 import org.json.JSONObject;
 
 import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
@@ -20,9 +22,8 @@ import jakarta.ws.rs.core.MediaType;
 public class EtudiantResource {
  
     @GET
-    @Path("/tous")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Etudiant> getStudents() {
+    public List<Etudiant> getAll() {
     	
     	EtudiantDao eDao = new EtudiantDao();
     	
@@ -33,7 +34,7 @@ public class EtudiantResource {
     @GET
     @Path("/{idEtudiant}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Etudiant getStudent(@PathParam("idEtudiant") Integer id) {
+    public Etudiant getById(@PathParam("idEtudiant") Integer id) {
     	
     	EtudiantDao eDao = new EtudiantDao();
     	
@@ -43,8 +44,36 @@ public class EtudiantResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON) 
     @Produces(MediaType.APPLICATION_JSON) 
-    public Etudiant addStudent(Etudiant etudiant) {
-        return etudiant;
+    public String add(Etudiant etudiant) {
+    	EtudiantDao eDao = new EtudiantDao();
+    	eDao.add(etudiant);
+        return "Ok";
+    }
+    
+
+    
+    @PUT
+    @Path("/{idEtudiant}")
+    @Consumes(MediaType.APPLICATION_JSON) 
+    @Produces(MediaType.APPLICATION_JSON) 
+    public String update(Etudiant etudiant, @PathParam("idEtudiant") Integer id) {
+    	EtudiantDao eDao = new EtudiantDao();
+    	etudiant.setIdEtudiant(id);
+    	eDao.update(etudiant);
+        return "Ok";
+    }
+    
+
+    @DELETE
+    @Path("/{idEtudiant}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String delete(@PathParam("idEtudiant") Integer id) {
+    	
+    	EtudiantDao eDao = new EtudiantDao();
+    	
+    	eDao.remove(eDao.getById(id));
+    	
+        return "removed";
     }
     
 }
